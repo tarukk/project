@@ -1,0 +1,115 @@
+<div class="scale-in-center">
+  <div class="table-head ">
+    <button class="mybutton" data-toggle="modal" data-target="#addModal" >
+      <i class="material-icons">
+        add
+      </i>
+    </button>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title  </th>
+      <td class="text-center" mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description  </th>
+      <td class="text-center" mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td class="text-center" mat-cell *matCellDef="let element">
+
+        <button data-toggle="modal" data-target="#updateModal"
+                type="button" class="mybutton" (click)="selectUpdate(element.id , element)">
+          <i class="material-icons ">
+            edit
+          </i>
+        </button>
+
+        <button data-toggle="modal" data-target="#deleteModal"
+                type="button" class="mybutton" (click)="select(element.id )">
+          <i class="material-icons">
+            delete
+          </i>
+        </button>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="loginForm" [formGroup]="updateForm" novalidate>
+
+            <input class="col-12 myinput"  type="text" formControlName="title" placeholder="Title" />
+            <textarea class="col-12 mytextarea"  type="text" formControlName="description" placeholder="Description" ></textarea>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" data-dismiss="modal" class="btn btn-primary" [disabled]="updateForm.invalid" (click)="update()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="loginForm" [formGroup]="addForm" novalidate>
+
+            <input class="col-12 myinput"  type="text" formControlName="title" placeholder="Title" />
+            <textarea class="col-12 mytextarea"  type="text" formControlName="description" placeholder="Description" >
+            </textarea>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+          <button type="button" class="btn btn-primary" [disabled]="addForm.invalid" data-dismiss="modal" (click)="add()" >Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          You really want to delete this Kindergarten ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="delete()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

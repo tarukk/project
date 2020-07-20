@@ -1,0 +1,29 @@
+<app-banner></app-banner>
+<div class="section">
+    <div class="content-wrap">
+        <div class="container">
+            <div class="row mt-4">
+
+
+                <div *ngFor="let kg of kindergartens" class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="rs-class-box mb-5">
+                    <div class="media-box">
+                      <img [src]="getURL(kg.picture)" />
+                    </div>
+                    <div class="body-box">
+                      <div class="class-name">
+                        <div class="title">{{kg.name}}</div>
+                        <div class="price"></div>
+                      </div>
+                      <p>{{kg.description}}</p>
+                      <div class="detail">
+                        <div class="age col"><span style="text-decoration: underline;">Note</span><br>{{kg.ratingNote}}</div>
+                        <div class="size col"><span style="text-decoration: underline;">Capacité</span><br>{{kg.capacity}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

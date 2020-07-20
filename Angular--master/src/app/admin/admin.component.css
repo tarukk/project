@@ -1,0 +1,77 @@
+table {
+  width : 90% ;
+  margin: 1%  5%;
+}
+
+th {
+  text-align: center !important ;
+  background-color: #323643 !important;
+  color: #f7f7f7 !important ;
+  font-size: 85%;
+  font-weight: normal;
+}
+
+tr:hover {
+  background-color: #e3e3e3 !important;
+  transition: 0.4s;
+}
+
+td {
+  text-align: center !important;
+  padding: 10px !important;
+  font-size: 90%;
+  color: #343434;
+}
+
+.table-head {
+  margin: 1%  5%;
+}
+
+.search-bar {
+  padding-left: 15px ;
+  color: #343434;
+  height:60px;
+  width: 500px;
+  border: 1px solid #323643 !important ;
+}
+
+button {
+  outline: none !important;
+  transition: 0.4s;
+}
+
+
+.head-btn:hover {
+  background-color: #323643 !important;
+}
+
+.myinput {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.mytextarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 80px;
+}
+
+
+.mybutton {
+  background-color: #FD4D40 ;
+  color: white ;
+  border-radius: 30px !important;
+  padding: 15px !important;
+  border: none;
+  margin: 5px;
+  font-size: 100%;
+  font-weight: 500;
+  font-style: normal !important;
+  cursor: pointer;
+}
+
+.mybutton:hover {
+  background-color: #e8473a;
+
+}

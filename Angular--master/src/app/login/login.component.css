@@ -1,0 +1,38 @@
+.container {
+  height: 60vh;
+}
+.row {
+  height: 100%;
+}
+
+input {
+  height: 50px !important;
+  margin: 10px;
+  width: 95%;
+  border: 1px solid grey;
+}
+
+mat-card {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 0;
+}
+
+.dialog-btn {
+  padding: 12px;
+  margin: 3%;
+  width: 94%;
+  background-color: #FD4D40;
+  color: #f9f7f7;
+  border: none;
+  outline : none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.dialog-btn:hover:not([disabled]) {
+  background-color: #e64c3e;
+}
+
+button[disabled]{
+  background: #cccccc;
+}

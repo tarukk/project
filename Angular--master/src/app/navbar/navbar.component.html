@@ -1,0 +1,54 @@
+<!-- NAVBAR SECTION -->
+<div class="navbar-main">
+    <div class="container">
+        <nav id="navbar-example" class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link"  routerLink="home">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  routerLink="about" >About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  routerLink="kindergarten">Les Jirdant D'Enfant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  routerLink="">TEACHERS</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link"  routerLink="admin" *ngIf="resolve()">Admin</a>
+                    </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link"  routerLink="login" *ngIf="!resolve()">Login</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link pointer" *ngIf="resolve()" (click)="logout()">logout</a>
+                  </li>
+<!--                    <li class="nav-item dropdown dmenu">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--              Nom Prénom-->
+<!--            </a>-->
+<!--                        <div class="dropdown-menu">-->
+<!--                            <a class="dropdown-item" href="page-gallery.html">Paramétres</a>-->
+<!--                            <a class="dropdown-item" href="page-testimonials.html">Profil</a>-->
+<!--                            <a class="dropdown-item" href="page-faq.html">Ajouter une jardin d'enfant</a>-->
+<!--                            <a class="dropdown-item" href="page-404.html">Ajouter un club</a>-->
+<!--                        </div>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </nav>
+        <!-- -->
+
+    </div>
+</div>

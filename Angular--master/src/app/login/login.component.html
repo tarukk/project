@@ -1,0 +1,27 @@
+<div class="container scale-in-center">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6" >
+
+      <mat-card class="p-2 p-sm-3 p-md-4">
+        <div class="text-center mb-4 mt-4" >
+          <img class="col-10 col-sm-8 col-md-7 img-fluid" src="assets/images/logo.png" alt="">
+        </div>
+
+        <mat-card-content>
+
+          <form name="loginForm" [formGroup]="loginForm" novalidate>
+
+            <input class="col-12  myinput"  type="email" formControlName="email" placeholder="Email" />
+
+            <input class="col-12  myinput"  type="password" formControlName="password" placeholder="Mot de Passe" />
+
+            <button class="dialog-btn mb-5" [disabled]="loginForm.invalid" (click)="onLogin()" >
+              Login
+            </button>
+          </form>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
